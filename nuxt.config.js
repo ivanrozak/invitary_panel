@@ -55,7 +55,24 @@ export default {
   },
 
   tailwindcss: {
-    jit: true
+    jit: true,
+    config: {
+      theme: {
+        backgroundPosition: {
+          bottom: 'bottom',
+          'bottom-2': 'center bottom 1rem',
+          center: 'center',
+          left: 'left',
+          'left-bottom': 'left bottom',
+          'left-top': 'left top',
+          right: 'right',
+          'right-bottom': 'right bottom',
+          'right-top': 'right top',
+          top: 'top',
+          'top-4': 'center top 1rem',
+        }
+      }
+    }
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

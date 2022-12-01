@@ -1,11 +1,13 @@
 <template>
-  <nav id="header" class="w-full z-30 sticky top-0 py-1 top-0 bg-white/90">
-    <div
-      class="w-full container mx-auto grid grid-cols-6 mt-0 px-6 py-1 md:py-3"
-    >
+  <nav
+    id="header"
+    class="w-full z-30 sticky top-0 py-1 top-0 transition-all text-[#818181]"
+    :class="scrolly < 73 ? 'bg-white' : 'bg-white/50'"
+  >
+    <div class="w-full mx-auto grid grid-cols-6 mt-0 px-6 py-1 md:py-3">
       <label class="cursor-pointer md:hidden block col-span-1 py-2">
         <svg
-          class="fill-current text-gray-900"
+          class="fill-current"
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"
@@ -21,18 +23,18 @@
       >
         <nav>
           <ul
-            class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0"
+            class="md:flex items-center justify-between text-base pt-4 md:pt-0"
           >
             <li>
               <a
-                class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                class="inline-block no-underline hover:underline py-2 px-4 font-clarendon"
                 href="#"
                 >Katalog</a
               >
             </li>
             <li>
               <a
-                class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                class="inline-block no-underline hover:underline py-2 px-4 font-clarendon"
                 href="#"
                 >Portofolio</a
               >
@@ -42,23 +44,28 @@
       </div>
 
       <div
-        class="order-1 md:order-2 flex flex-col items-center justify-center col-span-4 md:col-span-2 text-gray-700"
+        class="order-1 md:order-2 flex flex-col items-center justify-center col-span-4 md:col-span-2"
       >
-        <div class="text-xl tracking-wide flex items-center gap-1">
-          <img
+        <div
+          class="text-xl tracking-wide flex items-center gap-1 font-yellowtail"
+        >
+          <!-- <img
             src="https://img.icons8.com/cotton/64/null/information--v1.png"
             width="24px"
             height="24px"
-          />
+          /> -->
+          <img src="@/assets/img/logo.png" width="24px" height="24px" />
           Invitary
         </div>
         <div class="text-[10px] tracking-wide -mt-1">Share Your Happiness</div>
       </div>
 
-      <div
-        class="order-2 md:order-3 md:col-span-2 hidden md:block text-right text-gray-700"
-      >
-        <div class="py-2 px-4 ml-auto">Artikel</div>
+      <div class="order-2 md:order-3 md:col-span-2 hidden md:block text-right">
+        <a
+          class="inline-block no-underline hover:underline py-2 px-4 font-clarendon"
+          href="#"
+          >Artikel</a
+        >
       </div>
     </div>
   </nav>
@@ -67,5 +74,6 @@
 <script>
 export default {
   name: "NavHeader",
+  props: ["scrolly"],
 };
 </script>
