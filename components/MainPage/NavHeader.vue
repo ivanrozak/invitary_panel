@@ -1,8 +1,8 @@
 <template>
   <nav
     id="header"
-    class="w-full z-30 sticky top-0 py-1 top-0 transition-all text-[#818181]"
-    :class="scrolly < 73 ? 'bg-white' : 'bg-white/50'"
+    class="w-full z-30 fixed top-0 py-1 top-0 transition-all text-[#818181] px-6"
+    :class="{ 'bg-white/80': scrolly > 72 }"
   >
     <div class="w-full mx-auto grid grid-cols-6 mt-0 px-6 py-1 md:py-3">
       <label class="cursor-pointer md:hidden block col-span-1 py-2">

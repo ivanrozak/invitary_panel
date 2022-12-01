@@ -2,7 +2,7 @@
   <div>
     <!-- Hero Section -->
     <div
-      class="grid grid-cols-2 items-center bg-image-hero w-full h-full bg-fill bg-bottom-2 bg-no-repeat"
+      class="grid grid-cols-2 items-center bg-image-hero w-full h-full bg-fill bg-bottom-2 bg-no-repeat pt-[72px]"
     >
       <div class="overflow-hidden">
         <img
@@ -11,6 +11,10 @@
           alt=""
         />
       </div>
+    </div>
+    <!-- Service Section -->
+    <div class="container mx-auto px-6">
+      <div class="font-yellowtail text-[50px]">Our Service</div>
     </div>
   </div>
 </template>
